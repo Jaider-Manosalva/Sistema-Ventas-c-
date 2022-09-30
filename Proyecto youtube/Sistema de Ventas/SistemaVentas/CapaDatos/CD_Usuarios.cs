@@ -37,7 +37,8 @@ namespace CapaDatos
                                 Documento = dr["Documento"].ToString(),
                                 NombreCompleto = dr["NombreCompleto"].ToString(),
                                 Correo = dr["Correo"].ToString(),
-                                Clave = dr["Clave"].ToString()
+                                Clave = dr["Clave"].ToString(),
+                                Estado = Convert.ToBoolean(dr["Estado"])
                             }) ;
                         }
                     }

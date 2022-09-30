@@ -9,3 +9,14 @@ D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\CapaN
 D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\Capa_Negocio.dll
 D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\Capa_Negocio.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\bin\Debug\Capa_Negocio.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\bin\Debug\Capa_Negocio.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\bin\Debug\CapaDatos.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\bin\Debug\CapaEntidad.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\bin\Debug\CapaDatos.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\bin\Debug\CapaEntidad.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\Capa_Negocio.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\Capa_Negocio\obj\Debug\Capa_Negocio.pdb

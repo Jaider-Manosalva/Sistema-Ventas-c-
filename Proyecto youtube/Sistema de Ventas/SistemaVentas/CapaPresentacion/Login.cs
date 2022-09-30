@@ -37,7 +37,7 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("El usuario no se encuantra registrado");
+                MessageBox.Show("El usuario no se encuantra registrado","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
         }
 
