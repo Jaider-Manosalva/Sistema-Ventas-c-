@@ -1,0 +1,6 @@
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.dll
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.pdb
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb
