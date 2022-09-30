@@ -36,3 +36,13 @@ C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormCategoria.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormClientes.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormCompras.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormProducto.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormProveedores.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormReportes.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormUsuarios.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormRegistrar.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVerDetalle.resources
