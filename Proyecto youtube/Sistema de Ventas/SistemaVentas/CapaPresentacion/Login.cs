@@ -28,7 +28,7 @@ namespace CapaPresentacion
 
             if (ousuario != null)
             {
-                Inicio principal = new Inicio();
+                Inicio principal = new Inicio(ousuario);
 
                 principal.Show();
                 this.Hide();
