@@ -38,6 +38,7 @@ namespace CapaPresentacion
             if (MenuActivo != null)
             {
                 MenuActivo.BackColor = Color.FromArgb(255, 103, 0);
+                MenuAction.BackColor = Color.FromArgb(255, 103, 0);
             }
 
             menu.BackColor = Color.FromArgb(58, 110, 165);
@@ -65,6 +66,7 @@ namespace CapaPresentacion
             if (MenuAction != null)
             {
                 MenuAction.BackColor = Color.FromArgb(255, 103, 0);
+                MenuActivo.BackColor = Color.FromArgb(255, 103, 0);
             }
 
             menu.BackColor = Color.FromArgb(58, 110, 165);
@@ -89,6 +91,8 @@ namespace CapaPresentacion
 
         //Eventos de menu
 
+        //botones normales
+
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             OpenForm((ToolStripButton)sender,new FormUsuarios());
@@ -109,10 +113,7 @@ namespace CapaPresentacion
             OpenForm((ToolStripButton)sender, new FormProveedores());
         }
 
-        private void Contenedor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        //botones menu
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {

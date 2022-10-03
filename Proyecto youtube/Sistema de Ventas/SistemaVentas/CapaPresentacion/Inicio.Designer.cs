@@ -58,7 +58,6 @@
             this.Contenedor.Name = "Contenedor";
             this.Contenedor.Size = new System.Drawing.Size(1358, 613);
             this.Contenedor.TabIndex = 7;
-            this.Contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.Contenedor_Paint);
             // 
             // toolStrip1
             // 
