@@ -38,6 +38,10 @@ namespace CapaPresentacion
             if (MenuActivo != null)
             {
                 MenuActivo.BackColor = Color.FromArgb(255, 103, 0);
+            }
+
+            if (MenuAction != null)
+            {
                 MenuAction.BackColor = Color.FromArgb(255, 103, 0);
             }
 
@@ -66,6 +70,10 @@ namespace CapaPresentacion
             if (MenuAction != null)
             {
                 MenuAction.BackColor = Color.FromArgb(255, 103, 0);
+            }
+
+            if (MenuActivo != null)
+            {
                 MenuActivo.BackColor = Color.FromArgb(255, 103, 0);
             }
 
@@ -86,7 +94,6 @@ namespace CapaPresentacion
 
             Contenedor.Controls.Add(FormularioActivo);
             Formulario.Show();
-
         }
 
         //Eventos de menu
