@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using CapaEntidad;
+using Capa_Negocio;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion
 {
@@ -28,6 +30,20 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+
+            List<Permiso> ListaPermisos = new CN_Permiso().Listar(UsuarioActual.IdUsuario);
+
+            //los permisos se cargan pero como los botones son de tipo distinto entonces ocaciona error
+            ////foreach (ToolStripButton item in menu.Items)
+            ////{
+            ////    bool encontrado = ListaPermisos.Any(m => m.NombreMenu == item.Name);
+
+            ////    if (encontrado == false)
+            ////    {
+            ////        item.Visible = false;
+            ////    }
+            ////}
+
             txtUsuario.Text = UsuarioActual.NombreCompleto;
         }
 

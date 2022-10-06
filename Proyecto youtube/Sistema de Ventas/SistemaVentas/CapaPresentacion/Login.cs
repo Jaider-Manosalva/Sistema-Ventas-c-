@@ -52,5 +52,10 @@ namespace CapaPresentacion
             txtContraseña.Text = "";
             this.Show();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

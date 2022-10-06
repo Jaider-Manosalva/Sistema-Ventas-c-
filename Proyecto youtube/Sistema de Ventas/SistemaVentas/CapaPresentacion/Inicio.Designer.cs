@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.Contenedor = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.menu = new System.Windows.Forms.ToolStrip();
             this.btnUsuarios = new System.Windows.Forms.ToolStripButton();
             this.btnMantenedor = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.btnVentas = new System.Windows.Forms.ToolStripDropDownButton();
+            this.btnRegistrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnverDetalle = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCompras = new System.Windows.Forms.ToolStripButton();
             this.btnClientes = new System.Windows.Forms.ToolStripButton();
             this.btnProveedores = new System.Windows.Forms.ToolStripButton();
@@ -44,9 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnverDetalle = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1.SuspendLayout();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // Contenedor
@@ -59,12 +59,12 @@
             this.Contenedor.Size = new System.Drawing.Size(1358, 613);
             this.Contenedor.TabIndex = 7;
             // 
-            // toolStrip1
+            // menu
             // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu.AutoSize = false;
+            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(103)))), ((int)(((byte)(0)))));
+            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnUsuarios,
             this.btnMantenedor,
             this.btnVentas,
@@ -73,11 +73,11 @@
             this.btnProveedores,
             this.toolStripDropDownButton3,
             this.toolStripButton3});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 90);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1358, 85);
-            this.toolStrip1.TabIndex = 6;
-            this.toolStrip1.Text = "toolStrip1";
+            this.menu.Location = new System.Drawing.Point(0, 90);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(1358, 85);
+            this.menu.TabIndex = 6;
+            this.menu.Text = "toolStrip1";
             // 
             // btnUsuarios
             // 
@@ -113,14 +113,14 @@
             // btnCategoria
             // 
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(224, 26);
+            this.btnCategoria.Size = new System.Drawing.Size(155, 26);
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
             // btnProducto
             // 
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(224, 26);
+            this.btnProducto.Size = new System.Drawing.Size(155, 26);
             this.btnProducto.Text = "Producto";
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
@@ -139,6 +139,20 @@
             this.btnVentas.Size = new System.Drawing.Size(90, 60);
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(163, 26);
+            this.btnRegistrar.Text = "Registar";
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // btnverDetalle
+            // 
+            this.btnverDetalle.Name = "btnverDetalle";
+            this.btnverDetalle.Size = new System.Drawing.Size(163, 26);
+            this.btnverDetalle.Text = "Ver Detalle";
+            this.btnverDetalle.Click += new System.EventHandler(this.btnverDetalle_Click);
             // 
             // btnCompras
             // 
@@ -261,20 +275,6 @@
             this.txtUsuario.TabIndex = 9;
             this.txtUsuario.Text = "jhon";
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(224, 26);
-            this.btnRegistrar.Text = "Registar";
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // btnverDetalle
-            // 
-            this.btnverDetalle.Name = "btnverDetalle";
-            this.btnverDetalle.Size = new System.Drawing.Size(224, 26);
-            this.btnverDetalle.Text = "Ver Detalle";
-            this.btnverDetalle.Click += new System.EventHandler(this.btnverDetalle_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,14 +284,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Contenedor);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.menu);
             this.Controls.Add(this.menuStrip2);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,7 +300,7 @@
         #endregion
 
         private System.Windows.Forms.Panel Contenedor;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip menu;
         private System.Windows.Forms.ToolStripButton btnUsuarios;
         private System.Windows.Forms.ToolStripDropDownButton btnMantenedor;
         private System.Windows.Forms.ToolStripDropDownButton btnVentas;
