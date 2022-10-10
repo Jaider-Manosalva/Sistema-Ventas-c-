@@ -137,13 +137,16 @@
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(184, 22);
             this.txtDocumento.TabIndex = 1;
+            this.txtDocumento.Text = "202020";
             // 
             // txtContraseña
             // 
             this.txtContraseña.Location = new System.Drawing.Point(161, 346);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(184, 22);
             this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.Text = "123";
             // 
             // Login
             // 

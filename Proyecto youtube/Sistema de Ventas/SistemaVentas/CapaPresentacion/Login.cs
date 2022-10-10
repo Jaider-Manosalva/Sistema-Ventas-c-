@@ -34,6 +34,9 @@ namespace CapaPresentacion
                 this.Hide();
                 principal.Show();
                 principal.FormClosing += frm_closing;
+
+                //MenuDinamico fr = new MenuDinamico(ousuario);
+                //fr.Show();
             }
             else
             {

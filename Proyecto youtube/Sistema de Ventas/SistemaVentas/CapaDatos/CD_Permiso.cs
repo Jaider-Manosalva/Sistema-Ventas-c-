@@ -12,9 +12,9 @@ namespace CapaDatos
 {
     public class CD_Permiso
     {
-        public List<Permiso> Listar(int idusuario)
+        public string Permiso(int idusuario)
         {
-            List<Permiso> lista = new List<Permiso>();
+            string tipomenu = "";
 
             using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
             {
@@ -23,10 +23,8 @@ namespace CapaDatos
 
                     StringBuilder query = new StringBuilder();
 
-                    query.AppendLine("select p.IdRol,p.NombreMenu from PERMISO p");
-                    query.AppendLine("inner join ROL r on r.IdRol = p.IdRol");
-                    query.AppendLine("inner join USUARIO u on u.IdRol = r.IdRol");
-                    query.AppendLine("where u.IdUsuario = @idusuario");
+                    query.AppendLine("select IdRol from USUARIO");
+                    query.AppendLine("where IdUsuario = @idusuario");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.Parameters.AddWithValue("@idusuario", idusuario);
@@ -38,20 +36,19 @@ namespace CapaDatos
                     {
                         while (dr.Read())
                         {
-                            lista.Add(new Permiso()
-                            {
-                                ObjRol = new Rol() { IdRol = Convert.ToInt32(dr["IdRol"]) },
-                                NombreMenu = dr["NombreMenu"].ToString(),
-                            });
+                            Permiso permiso = new Permiso();
+
+                            permiso.NombreMenu = dr["IdRol"].ToString();
+                            tipomenu = permiso.NombreMenu;
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    lista = new List<Permiso>();
+                    tipomenu = null;
                 }
             }
-            return lista;
+            return tipomenu;
         }
     }
 }

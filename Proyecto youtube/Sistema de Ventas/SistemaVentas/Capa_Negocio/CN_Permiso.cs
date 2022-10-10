@@ -13,9 +13,9 @@ namespace Capa_Negocio
     {
         private CD_Permiso objcd_permiso = new CD_Permiso();
 
-        public List<Permiso> Listar(int idusuario)
+        public string tipopermiso(int idusuario)
         {
-            return objcd_permiso.Listar(idusuario);
+            return objcd_permiso.Permiso(idusuario);
         }
     }
 }

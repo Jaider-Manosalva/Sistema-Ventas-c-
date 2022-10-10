@@ -40,8 +40,8 @@
             this.btnCompras = new System.Windows.Forms.ToolStripButton();
             this.btnClientes = new System.Windows.Forms.ToolStripButton();
             this.btnProveedores = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.btnReportes = new System.Windows.Forms.ToolStripDropDownButton();
+            this.btnAcercaDe = new System.Windows.Forms.ToolStripButton();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -71,8 +71,8 @@
             this.btnCompras,
             this.btnClientes,
             this.btnProveedores,
-            this.toolStripDropDownButton3,
-            this.toolStripButton3});
+            this.btnReportes,
+            this.btnAcercaDe});
             this.menu.Location = new System.Drawing.Point(0, 90);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(1358, 85);
@@ -90,6 +90,7 @@
             this.btnUsuarios.MergeAction = System.Windows.Forms.MergeAction.Replace;
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(90, 60);
+            this.btnUsuarios.Tag = "botones";
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
@@ -107,20 +108,21 @@
             this.btnMantenedor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnMantenedor.Name = "btnMantenedor";
             this.btnMantenedor.Size = new System.Drawing.Size(90, 60);
+            this.btnMantenedor.Tag = "botones";
             this.btnMantenedor.Text = "Mantenedor";
             this.btnMantenedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // btnCategoria
             // 
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(155, 26);
+            this.btnCategoria.Size = new System.Drawing.Size(224, 26);
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
             // btnProducto
             // 
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(155, 26);
+            this.btnProducto.Size = new System.Drawing.Size(224, 26);
             this.btnProducto.Text = "Producto";
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
@@ -137,6 +139,7 @@
             this.btnVentas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(90, 60);
+            this.btnVentas.Tag = "botones";
             this.btnVentas.Text = "Ventas";
             this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -165,6 +168,7 @@
             this.btnCompras.MergeAction = System.Windows.Forms.MergeAction.Replace;
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(90, 60);
+            this.btnCompras.Tag = "botones";
             this.btnCompras.Text = "Compras";
             this.btnCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
@@ -180,6 +184,7 @@
             this.btnClientes.MergeAction = System.Windows.Forms.MergeAction.Replace;
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(90, 60);
+            this.btnClientes.Tag = "botones";
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
@@ -195,36 +200,39 @@
             this.btnProveedores.MergeAction = System.Windows.Forms.MergeAction.Replace;
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(90, 60);
+            this.btnProveedores.Tag = "botones";
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
-            // toolStripDropDownButton3
+            // btnReportes
             // 
-            this.toolStripDropDownButton3.AutoSize = false;
-            this.toolStripDropDownButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripDropDownButton3.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton3.Image = global::CapaPresentacion.Properties.Resources.grafico__1_;
-            this.toolStripDropDownButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(90, 60);
-            this.toolStripDropDownButton3.Text = "Reportes";
-            this.toolStripDropDownButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReportes.AutoSize = false;
+            this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Image = global::CapaPresentacion.Properties.Resources.grafico__1_;
+            this.btnReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(90, 60);
+            this.btnReportes.Tag = "botones";
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // toolStripButton3
+            // btnAcercaDe
             // 
-            this.toolStripButton3.AutoSize = false;
-            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton3.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton3.Image = global::CapaPresentacion.Properties.Resources.acerca_de__1_;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.MergeAction = System.Windows.Forms.MergeAction.Replace;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(90, 60);
-            this.toolStripButton3.Text = "Acerca De";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAcercaDe.AutoSize = false;
+            this.btnAcercaDe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcercaDe.ForeColor = System.Drawing.Color.White;
+            this.btnAcercaDe.Image = global::CapaPresentacion.Properties.Resources.acerca_de__1_;
+            this.btnAcercaDe.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnAcercaDe.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAcercaDe.MergeAction = System.Windows.Forms.MergeAction.Replace;
+            this.btnAcercaDe.Name = "btnAcercaDe";
+            this.btnAcercaDe.Size = new System.Drawing.Size(90, 60);
+            this.btnAcercaDe.Tag = "botones";
+            this.btnAcercaDe.Text = "Acerca De";
+            this.btnAcercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // menuStrip2
             // 
@@ -307,8 +315,8 @@
         private System.Windows.Forms.ToolStripButton btnCompras;
         private System.Windows.Forms.ToolStripButton btnClientes;
         private System.Windows.Forms.ToolStripButton btnProveedores;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripDropDownButton btnReportes;
+        private System.Windows.Forms.ToolStripButton btnAcercaDe;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -31,18 +31,17 @@ namespace CapaPresentacion
         private void Inicio_Load(object sender, EventArgs e)
         {
 
-            List<Permiso> ListaPermisos = new CN_Permiso().Listar(UsuarioActual.IdUsuario);
+            string menu = new CN_Permiso().tipopermiso(UsuarioActual.IdUsuario);
+
 
             //los permisos se cargan pero como los botones son de tipo distinto entonces ocaciona error
-            ////foreach (ToolStripButton item in menu.Items)
-            ////{
-            ////    bool encontrado = ListaPermisos.Any(m => m.NombreMenu == item.Name);
 
-            ////    if (encontrado == false)
-            ////    {
-            ////        item.Visible = false;
-            ////    }
-            ////}
+            if (menu.Equals("2"))
+            {
+                btnUsuarios.Visible = false;
+                btnMantenedor.Visible = false;
+                btnReportes.Visible = false;
+            }
 
             txtUsuario.Text = UsuarioActual.NombreCompleto;
         }

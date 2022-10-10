@@ -8,7 +8,7 @@ insert into ROL(Descripcion)
 values('EMPLEADO')
 
 insert USUARIO(Documento,NombreCompleto,Correo,Clave,IdRol,Estado)
-values ('202020','Jaider','@gmail.com',123,2,1)
+values ('303030','Jhon','@gmail.com',123,2,1)
 --values('101010','ADMIN','@gmail','123',1,1)
 
 --select * from PERMISO

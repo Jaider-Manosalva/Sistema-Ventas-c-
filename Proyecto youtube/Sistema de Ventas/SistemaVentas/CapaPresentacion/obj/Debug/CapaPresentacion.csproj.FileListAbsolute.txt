@@ -46,3 +46,4 @@ C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormRegistrar.resources
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVerDetalle.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.MenuDinamico.resources
