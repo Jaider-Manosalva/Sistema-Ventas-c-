@@ -14,6 +14,7 @@ namespace CapaPresentacion
 {
     public partial class MenuDinamico : Form
     {
+        //MENU DE PRUEBA REALIZADO POR EL PROFESOR TIMY
         public MenuDinamico(Usuario usuario)
         {
             UsuarioActual = usuario;

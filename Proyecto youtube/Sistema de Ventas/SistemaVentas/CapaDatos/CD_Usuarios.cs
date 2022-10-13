@@ -12,6 +12,7 @@ namespace CapaDatos
 {
     public class CD_Usuarios
     {
+        //OBTENER LA LISTA DE LOS USUARIOS DE LA DATABASE
         public List<Usuario> Listar()
         {
             List<Usuario> lista = new List<Usuario>();
@@ -20,9 +21,11 @@ namespace CapaDatos
             {
                 try
                 {
-                    string query = "select IdUsuario,Documento,NombreCompleto,Correo,Clave,Estado from USUARIO";
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("select u.IdUsuario,u.Documento,u.NombreCompleto,u.Correo,u.Clave,u.Estado,r.IdRol,r.Descripcion from USUARIO u");
+                    query.AppendLine("inner join rol r on r.IdRol = u.IdRol");
 
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.CommandType = CommandType.Text;
 
                     oconexion.Open();
@@ -38,8 +41,12 @@ namespace CapaDatos
                                 NombreCompleto = dr["NombreCompleto"].ToString(),
                                 Correo = dr["Correo"].ToString(),
                                 Clave = dr["Clave"].ToString(),
-                                Estado = Convert.ToBoolean(dr["Estado"])
-                            }) ;
+                                Estado = Convert.ToBoolean(dr["Estado"]),
+                                ObjRol = new Rol() { 
+                                    IdRol = Convert.ToInt32(dr["IdRol"]),
+                                    Descripcion = dr["Descripcion"].ToString()
+                                }
+                            });
                         }
                     }
                 }

@@ -34,6 +34,7 @@
             this.btnMantenedor = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProducto = new System.Windows.Forms.ToolStripMenuItem();
+            this.negocioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnVentas = new System.Windows.Forms.ToolStripDropDownButton();
             this.btnRegistrar = new System.Windows.Forms.ToolStripMenuItem();
             this.btnverDetalle = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,7 @@
             this.Contenedor.Location = new System.Drawing.Point(0, 175);
             this.Contenedor.Margin = new System.Windows.Forms.Padding(4);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(1358, 613);
+            this.Contenedor.Size = new System.Drawing.Size(1554, 672);
             this.Contenedor.TabIndex = 7;
             // 
             // menu
@@ -75,7 +76,7 @@
             this.btnAcercaDe});
             this.menu.Location = new System.Drawing.Point(0, 90);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1358, 85);
+            this.menu.Size = new System.Drawing.Size(1554, 85);
             this.menu.TabIndex = 6;
             this.menu.Text = "toolStrip1";
             // 
@@ -100,7 +101,8 @@
             this.btnMantenedor.AutoSize = false;
             this.btnMantenedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnCategoria,
-            this.btnProducto});
+            this.btnProducto,
+            this.negocioToolStripMenuItem});
             this.btnMantenedor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMantenedor.ForeColor = System.Drawing.Color.White;
             this.btnMantenedor.Image = global::CapaPresentacion.Properties.Resources.soporte_en_linea;
@@ -115,16 +117,22 @@
             // btnCategoria
             // 
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(224, 26);
+            this.btnCategoria.Size = new System.Drawing.Size(155, 26);
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
             // btnProducto
             // 
             this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(224, 26);
+            this.btnProducto.Size = new System.Drawing.Size(155, 26);
             this.btnProducto.Text = "Producto";
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
+            // 
+            // negocioToolStripMenuItem
+            // 
+            this.negocioToolStripMenuItem.Name = "negocioToolStripMenuItem";
+            this.negocioToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.negocioToolStripMenuItem.Text = "Negocio";
             // 
             // btnVentas
             // 
@@ -242,7 +250,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip2.Size = new System.Drawing.Size(1358, 90);
+            this.menuStrip2.Size = new System.Drawing.Size(1554, 90);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -287,7 +295,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 788);
+            this.ClientSize = new System.Drawing.Size(1554, 847);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -325,6 +333,7 @@
         private System.Windows.Forms.ToolStripMenuItem btnProducto;
         private System.Windows.Forms.ToolStripMenuItem btnRegistrar;
         private System.Windows.Forms.ToolStripMenuItem btnverDetalle;
+        private System.Windows.Forms.ToolStripMenuItem negocioToolStripMenuItem;
     }
 }
 

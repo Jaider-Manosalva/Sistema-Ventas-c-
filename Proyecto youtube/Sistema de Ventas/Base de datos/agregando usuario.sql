@@ -40,3 +40,10 @@ inner join USUARIO u on u.IdRol = r.IdRol
 where u.IdUsuario = 1
 
 select * from PERMISO
+
+use DB_SISTEMA_VENTAS
+
+select u.IdUsuario,u.Documento,u.NombreCompleto,u.Correo,u.Clave,u.Estado,r.IdRol,r.Descripcion from USUARIO u
+inner join rol r on r.IdRol = u.IdRol
+
+update USUARIO set Estado = 0 where IdUsuario = 3

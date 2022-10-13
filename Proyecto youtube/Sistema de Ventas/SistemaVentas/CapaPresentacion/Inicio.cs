@@ -10,31 +10,35 @@ using System.Windows.Forms;
 
 using CapaEntidad;
 using Capa_Negocio;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion
 {
     public partial class Inicio : Form
     {
-
+        //ATRIBUTOS 
         private static Usuario UsuarioActual;
         private static ToolStripButton MenuActivo = null;
         private static ToolStripDropDownButton MenuAction = null;
         private static Form FormularioActivo = null;
 
-        public Inicio(Usuario objUsuario)
+        //RECOMENDACION: Quitar el null de parametro de inicio !! CUANDO SE LANZE A PRODUCCION O SE PRUEBE
+        public Inicio(Usuario objUsuario = null)
         {
-            UsuarioActual = objUsuario;
+            //RECOMENDACION ELIMINAR CONDICION !!  CUANDO SE LANZE A PRODUCCION O SE PRUEBE
+            if (objUsuario == null)
+            {
+                UsuarioActual = new Usuario() { NombreCompleto = "admin predefinido", IdUsuario = 1 };
+            }
+            //RECOMENDACION QUITAR COMENTADO DE LA SIGUIENTE LINEA !! CUANDO SE LANZE A PRODUCCION O SE PRUEBE
+            //UsuarioActual = objUsuario;
             InitializeComponent();
         }
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-
+            //SEGUN EL ROL DEL USUARIO SE RESTRINGIRA EL USU DE CIERTAS OPCIONES DEL MENU
             string menu = new CN_Permiso().tipopermiso(UsuarioActual.IdUsuario);
-
-
-            //los permisos se cargan pero como los botones son de tipo distinto entonces ocaciona error
 
             if (menu.Equals("2"))
             {
@@ -46,8 +50,7 @@ namespace CapaPresentacion
             txtUsuario.Text = UsuarioActual.NombreCompleto;
         }
 
-        //Metodo para mostrar cada formulario
-
+        //METODO PARA LA ITERACCION DEL MENU CUANDO ES ToolStripButton
         private void OpenForm(ToolStripButton menu , Form Formulario )
         {
             if (MenuActivo != null)
@@ -80,6 +83,7 @@ namespace CapaPresentacion
 
         }
 
+        //METODO PARA LA ITERACCION DEL MENU ToolStripDropDownButton
         private void OpenForm(ToolStripDropDownButton menu, Form Formulario)
         {
             if (MenuAction != null)
@@ -111,9 +115,7 @@ namespace CapaPresentacion
             Formulario.Show();
         }
 
-        //Eventos de menu
-
-        //botones normales
+        //EVENTOS BOTONES MENU
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
@@ -135,7 +137,7 @@ namespace CapaPresentacion
             OpenForm((ToolStripButton)sender, new FormProveedores());
         }
 
-        //botones menu
+        //EVENTOS BOTONES SUBMENUS
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {

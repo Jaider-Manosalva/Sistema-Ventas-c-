@@ -12,7 +12,7 @@ namespace Capa_Negocio
     public class CN_Permiso
     {
         private CD_Permiso objcd_permiso = new CD_Permiso();
-
+        //SE OBTIENE EL ID DEL USUARIO PARA SABER QUE PERMISO TENDRA
         public string tipopermiso(int idusuario)
         {
             return objcd_permiso.Permiso(idusuario);

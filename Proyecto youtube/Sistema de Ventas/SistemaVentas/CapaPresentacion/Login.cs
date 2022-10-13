@@ -21,10 +21,11 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        //VERIFICACION DE INICIO DE SECCION
         private void btnInciar_Click(object sender, EventArgs e)
         {
-            List<Usuario> TEST = new CN_Usuario().Listar();
-            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento == txtDocumento.Text && u.Clave == txtContraseña.Text).FirstOrDefault();
+            List<Usuario> TEST = new CN_Usuario().Lista();
+            Usuario ousuario = new CN_Usuario().Lista().Where(u => u.Documento == txtDocumento.Text && u.Clave == txtContraseña.Text).FirstOrDefault();
 
             if (ousuario != null)
             {
@@ -34,9 +35,6 @@ namespace CapaPresentacion
                 this.Hide();
                 principal.Show();
                 principal.FormClosing += frm_closing;
-
-                //MenuDinamico fr = new MenuDinamico(ousuario);
-                //fr.Show();
             }
             else
             {
@@ -44,11 +42,13 @@ namespace CapaPresentacion
             }
         }
 
+        //EVENTO DEL BOTON CERRAR
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //EVENTO PARA CUANDO EL FORMULARIO CIERRE LIMPIE LOS TEXTBOX
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
             txtDocumento.Text = "";
@@ -56,9 +56,5 @@ namespace CapaPresentacion
             this.Show();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
