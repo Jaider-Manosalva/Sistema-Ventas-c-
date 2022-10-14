@@ -69,13 +69,35 @@ namespace CapaPresentacion
         //EVENTO BOTON GUARDAR, AGREGA DATOS AL DATAGRIDVIEW
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            dataGriwUsuario.Rows.Add(new object[] 
-            { "",txtId.Text,txtDocumento.Text,txtNombre.Text,txtCorreo.Text,txtClave.Text,
-                ((OpcionCombo)comboRol.SelectedItem).Valor.ToString(), 
+            string mensaje = string.Empty;
+            Usuario usuario = new Usuario()
+            {
+                IdUsuario = Convert.ToInt32(txtId.Text),
+                Documento = txtDocumento.Text,
+                NombreCompleto = txtNombre.Text,
+                Correo = txtCorreo.Text,
+                Clave = txtClave.Text,
+                ObjRol = new Rol(){ IdRol = Convert.ToInt32(((OpcionCombo)comboRol.SelectedItem).Valor)},
+                Estado = Convert.ToInt32(((OpcionCombo)comboEstado.SelectedItem).Valor) == 1 ? true : false
+            };
+
+            int idusuariogenerado = new CN_Usuario().Registar(usuario,out mensaje);
+
+            if (idusuariogenerado != 0)
+            {
+                dataGriwUsuario.Rows.Add(new object[]
+                { "",idusuariogenerado,txtDocumento.Text,txtNombre.Text,txtCorreo.Text,txtClave.Text,
+                ((OpcionCombo)comboRol.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)comboRol.SelectedItem).Texto,
                 ((OpcionCombo)comboEstado.SelectedItem).Texto.ToString(),
                 ((OpcionCombo)comboEstado.SelectedItem).Valor.ToString()
-            });
+                });
+            }
+            else
+            {
+                MessageBox.Show(mensaje);
+            }
+            
 
             Clear();
         }
@@ -94,6 +116,7 @@ namespace CapaPresentacion
             comboEstado.SelectedIndex = 0;
         }
 
+        //EVENTO QUE PINTA EL CHECK EN EL BOTON DEL DATAGRID
         private void dataGriwUsuario_CellPainting(object sender,DataGridViewCellPaintingEventArgs e)
         {
             if (e.RowIndex < 0)
@@ -112,7 +135,7 @@ namespace CapaPresentacion
                 e.Handled = true;
             }
         }
-
+        //EVENTO PARA SELECCIONAR LOS DATOS DE CADA USUARIO EN LA TABLA
         private void dataGriwUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGriwUsuario.Columns[e.ColumnIndex].Name == "btnSeleccionar")

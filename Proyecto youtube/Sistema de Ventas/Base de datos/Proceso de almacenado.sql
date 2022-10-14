@@ -87,3 +87,50 @@ select @Respuesta
 select @Mensaje
 
 select * from USUARIO
+
+-- proceso para eliminar
+
+CREATE PROC SP_ELIMINARUSUARIO(
+@IdUsuario int,
+@Respuesta bit output,
+@Mensaje varchar(500) output
+)
+as
+begin
+  set @Respuesta = 0
+  set @Mensaje = ''
+  declare @pasoreglas bit = 1;
+
+  if exists(select * from COMPRA C
+  inner join USUARIO U on U.IdUsuario = C.IdUsuario
+  where u.IdUsuario = @IdUsuario
+  )
+  begin
+      set @pasoreglas = 0;
+      set @Respuesta = 0
+      set @Mensaje = @Mensaje + 'No se puede eliminar porque el usuario se encuentra relacionado a una compra\n'
+  end
+  if exists(select * from VENTA V
+  inner join USUARIO U on U.IdUsuario = V.IdUsuario
+  where u.IdUsuario = @IdUsuario
+  )
+  begin
+      set @pasoreglas = 0;
+      set @Respuesta = 0
+      set @Mensaje = @Mensaje +'No se puede eliminar porque el usuario se encuentra relacionado a una Venta\n'
+  end
+  if(@pasoreglas = 1)
+  begin
+     delete from USUARIO where IdUsuario = @IdUsuario
+	 set @Respuesta = 1
+  end
+end
+
+declare @respuesta bit
+declare @mensaje varchar(500)
+
+exec SP_ELIMINARUSUARIO 5,@Respuesta output,@Mensaje output
+
+select @Respuesta
+
+select @Mensaje
