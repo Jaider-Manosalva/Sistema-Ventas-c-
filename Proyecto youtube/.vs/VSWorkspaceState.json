@@ -3,9 +3,8 @@
     "",
     "\\Sistema de Ventas",
     "\\Sistema de Ventas\\SistemaVentas",
-    "\\Sistema de Ventas\\SistemaVentas\\CapaDatos",
     "\\Sistema de Ventas\\SistemaVentas\\CapaPresentacion"
   ],
-  "SelectedNode": "\\Sistema de Ventas\\SistemaVentas\\CapaDatos\\CD_Usuarios.cs",
+  "SelectedNode": "\\Sistema de Ventas\\SistemaVentas\\CapaPresentacion\\Inicio.cs",
   "PreviewInSolutionExplorer": false
 }

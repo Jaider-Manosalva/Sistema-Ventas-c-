@@ -3,7 +3,6 @@ use DB_SISTEMA_VENTAS
 select * from USUARIO
 
 -- Proceso de Agregar
-
 CREATE PROC SP_REGISTRARUSUARIO(
 @Documento varchar(50),
 @NombreCompleto varchar(100),
