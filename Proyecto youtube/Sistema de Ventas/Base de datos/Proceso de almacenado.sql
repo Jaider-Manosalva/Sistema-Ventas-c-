@@ -1,8 +1,9 @@
 use DB_SISTEMA_VENTAS
 
 select * from USUARIO
+use DB_SISTEMA_VENTAS
+/*--- PROCEDIMIENTO PARA AGREGAR USUARIO ---*/
 
--- Proceso de Agregar
 CREATE PROC SP_REGISTRARUSUARIO(
 @Documento varchar(50),
 @NombreCompleto varchar(100),
@@ -41,7 +42,7 @@ select @Mensaje
 
 go
 
--- proceso para actualizar
+/*----- PROCEDIMIENTO PARA ACTUALIZAR USUARIO -----*/
 
 CREATE PROC SP_EDITARUSUARIO(
 @IdUsuario int,
@@ -87,7 +88,7 @@ select @Mensaje
 
 select * from USUARIO
 
--- proceso para eliminar
+/*----- PROCEDIMIENTO PARA ELIMINAR USUARIO -----*/
 
 CREATE PROC SP_ELIMINARUSUARIO(
 @IdUsuario int,
@@ -133,3 +134,73 @@ exec SP_ELIMINARUSUARIO 5,@Respuesta output,@Mensaje output
 select @Respuesta
 
 select @Mensaje
+
+
+/*----- PROCEDIMIENTO PARA AGREGAR CATEGORIA ------*/
+
+CREATE PROC SP_AGREGAR_CATEGORIA(
+@Descripcion varchar(100),
+@Resultado int output,
+@Mensaje varchar(500) output
+)
+as
+begin
+    set @Resultado = 0
+	if not exists(select * from CATEGORIA where Descripcion = @Descripcion)
+	begin
+	     insert into CATEGORIA(Descripcion) values (@Descripcion)
+		 set @Resultado = SCOPE_IDENTITY()
+	end
+	else
+	     set @Mensaje = 'No se puede repetir la descripcion de una categoria'
+end
+go
+/*----- PROCEDIMIENTO PARA ACTUALIZAR CATEGORIA ------*/
+
+CREATE PROC SP_EDITAR_CATEGORIA(
+@IdCategoria int,
+@Descripcion varchar(500),
+@Resultado bit output,
+@Mensaje varchar(500) output
+)
+as
+begin
+    set @Resultado = 1
+	if not exists(select * from CATEGORIA where Descripcion = @Descripcion and IdCategoria != @IdCategoria)
+	begin
+	   update CATEGORIA 
+	   set Descripcion = @Descripcion
+	   where IdCategoria = @IdCategoria
+	end
+	else
+	begin
+	    set @Resultado = 0
+		set @Mensaje = 'No se puede repetir la descripcion de una categoria'
+	end
+end
+
+go
+
+/*----- PROCEDIMIENTO PARA ELIMINAR CATEGORIA ------*/
+
+CREATE PROC SP_ELIMINAR_CATEGORIA(
+@IdCategoria int,
+@Resultado bit output,
+@Mensaje varchar(500) output
+)
+as
+begin
+    set @Resultado = 1
+	if not exists(
+	  select * from CATEGORIA as c inner join PRODUCTO as p on p.IdCategoria = c.IdCategoria
+	  where c.IdCategoria = @IdCategoria
+	)
+	begin
+	   delete top(1) from CATEGORIA where IdCategoria = @IdCategoria
+	end
+	else
+	begin
+	    set @Resultado = 0
+		set @Mensaje = 'La categoria se encuentra relacionada a un producto, por lo tanto no se puede eliminar!!'
+	end
+end
