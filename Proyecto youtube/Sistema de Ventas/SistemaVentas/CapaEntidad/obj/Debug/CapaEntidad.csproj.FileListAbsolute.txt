@@ -4,3 +4,9 @@ D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEn
 D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
 D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb

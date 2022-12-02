@@ -11,7 +11,7 @@ namespace Capa_Negocio
     public class CN_Categoria
     {
         private CD_Categoria objcd_Categoria = new CD_Categoria();
-        //SE OBTIENE LA LISTA DE USUARIOS DESDE LA CAPA DE DATOS
+        //SE OBTIENE LA LISTA DE CATEGORIAS DESDE LA CAPA DE DATOS
         public List<Categoria> Lista()
         {
             return objcd_Categoria.Listar();

@@ -136,10 +136,11 @@ select @Respuesta
 select @Mensaje
 
 
-/*----- PROCEDIMIENTO PARA AGREGAR CATEGORIA ------*/
+/*----- PROCEDIMIENTO PARA AGREGAR CATEGORIA // modificado por falta de parametro------*/ 
 
-CREATE PROC SP_AGREGAR_CATEGORIA(
+Alter Procedure SP_AGREGAR_CATEGORIA(
 @Descripcion varchar(100),
+@Estado bit,
 @Resultado int output,
 @Mensaje varchar(500) output
 )
@@ -148,7 +149,7 @@ begin
     set @Resultado = 0
 	if not exists(select * from CATEGORIA where Descripcion = @Descripcion)
 	begin
-	     insert into CATEGORIA(Descripcion) values (@Descripcion)
+	     insert into CATEGORIA(Descripcion, estado) values (@Descripcion,@Estado)
 		 set @Resultado = SCOPE_IDENTITY()
 	end
 	else
@@ -157,9 +158,10 @@ end
 go
 /*----- PROCEDIMIENTO PARA ACTUALIZAR CATEGORIA ------*/
 
-CREATE PROC SP_EDITAR_CATEGORIA(
+Alter Procedure SP_EDITAR_CATEGORIA(
 @IdCategoria int,
 @Descripcion varchar(500),
+@Estado bit,
 @Resultado bit output,
 @Mensaje varchar(500) output
 )
@@ -169,7 +171,8 @@ begin
 	if not exists(select * from CATEGORIA where Descripcion = @Descripcion and IdCategoria != @IdCategoria)
 	begin
 	   update CATEGORIA 
-	   set Descripcion = @Descripcion
+	   set Descripcion = @Descripcion,
+	       estado = @Estado
 	   where IdCategoria = @IdCategoria
 	end
 	else
@@ -204,3 +207,104 @@ begin
 		set @Mensaje = 'La categoria se encuentra relacionada a un producto, por lo tanto no se puede eliminar!!'
 	end
 end
+
+insert into CATEGORIA(Descripcion,estado) values ('Lacteos',1)
+insert into CATEGORIA(Descripcion,estado) values ('Embutidos',1)
+insert into CATEGORIA(Descripcion,estado) values ('Enlatados',1)
+
+select * from CATEGORIA
+
+update CATEGORIA set estado = 0 where Descripcion = 'prueba2'
+
+/*--PROCEDIMIENTO ALMACENADO PARA AGREGAR PRODUCTO --*/
+
+CREATE PROC SP_AGREGAR_PRODUCTO(
+@Codigo varchar(50),
+@Nombre varchar(50),
+@Descripcion varchar(50),
+@IdCategoria int,
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar(500) output
+)
+AS
+BEGIN
+   set @Resultado = 0
+   if NOT EXISTS(select * from PRODUCTO where Codigo = @Codigo)
+   begin
+      insert into PRODUCTO(Codigo,Nombre,Descripcion,IdCategoria) values (@Codigo,@Nombre,@Descripcion,@IdCategoria)
+	  set @Resultado = SCOPE_IDENTITY()
+   end
+   else
+     set @Mensaje = '¡ Ya existe un producto con el mismo codigo !' 
+END
+
+/*--PROCEDIMIENTO ALMACENADO PARA EDITAR PRODUCTO --*/
+
+CREATE PROC SP_EDITAR_PRODUCTO(
+@IdProducto int,
+@Codigo varchar(50),
+@Nombre varchar(50),
+@Descripcion varchar(50),
+@IdCategoria int,
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar(500) output
+)
+AS
+BEGIN
+   set @Resultado = 1
+   if NOT EXISTS(select * from PRODUCTO where Codigo = @Codigo and IdProducto != @IdProducto)
+   begin
+      update PRODUCTO set
+	  Codigo = @Codigo,
+	  Nombre = @Nombre,
+	  Descripcion = @Descripcion,
+	  IdCategoria = @IdCategoria,
+	  Estado = @Estado
+	  where IdProducto = @IdProducto
+   end
+   else
+     set @Resultado = 0 
+     set @Mensaje = '¡ Ya existe un producto con el mismo codigo !' 
+END
+
+/*--PROCEDIMIENTO ALMACENADO PARA ELIMINAR PRODUCTO --*/
+
+CREATE PROC SP_ELIMINAR_PRODUCTO(
+@IdProducto int,
+@Resultado int output,
+@Mensaje varchar(500) output
+)
+AS
+BEGIN
+
+   set @Resultado = 0
+   set @Mensaje = ''
+   declare @pasoreglas bit = 1
+
+   if NOT EXISTS(select * from DETALLE_COMPRA as dc 
+   inner join PRODUCTO as p on p.IdProducto = dc.IdProducto
+   where p.IdProducto = @IdProducto)
+   begin
+      set @pasoreglas = 0
+	  set @Resultado = 0
+	  set @Mensaje = 'No se Puede Eliminar el producto por que se encuentra relacionado a una COMPRA\n'
+   end
+
+   if NOT EXISTS(select * from DETALLE_VENTA as dv 
+   inner join PRODUCTO as p on p.IdProducto = dv.IdProducto
+   where p.IdProducto = @IdProducto)
+   begin
+      set @pasoreglas = 0
+	  set @Resultado = 0
+	  set @Mensaje = 'No se Puede Eliminar el producto por que se encuentra relacionado a una VENTA\n'
+   end
+
+   if(@pasoreglas = 1)
+   begin
+      delete from PRODUCTO where IdProducto = @IdProducto
+	  set @Resultado = 1
+   end
+
+END

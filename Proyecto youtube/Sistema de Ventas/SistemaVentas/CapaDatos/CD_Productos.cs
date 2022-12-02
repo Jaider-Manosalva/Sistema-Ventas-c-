@@ -1,17 +1,15 @@
-﻿using System;
+﻿using CapaEntidad;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Data;
-using System.Data.SqlClient;
-using CapaEntidad;
-using System.Collections;
-
 namespace CapaDatos
 {
-    public class CD_Usuarios
+    public class CD_Productos
     {
         //OBTENER LA LISTA DE LOS USUARIOS DE LA DATABASE
         public List<Usuario> Listar()
@@ -43,7 +41,8 @@ namespace CapaDatos
                                 Correo = dr["Correo"].ToString(),
                                 Clave = dr["Clave"].ToString(),
                                 Estado = Convert.ToBoolean(dr["Estado"]),
-                                ObjRol = new Rol() { 
+                                ObjRol = new Rol()
+                                {
                                     IdRol = Convert.ToInt32(dr["IdRol"]),
                                     Descripcion = dr["Descripcion"].ToString()
                                 }
@@ -51,7 +50,7 @@ namespace CapaDatos
                         }
                     }
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                     lista = new List<Usuario>();
                 }
@@ -68,7 +67,7 @@ namespace CapaDatos
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
                     SqlCommand cmd = new SqlCommand("SP_REGISTRARUSUARIO", oconexion);
-                    cmd.Parameters.AddWithValue("Documento",obj.Documento);
+                    cmd.Parameters.AddWithValue("Documento", obj.Documento);
                     cmd.Parameters.AddWithValue("NombreCompleto", obj.NombreCompleto);
                     cmd.Parameters.AddWithValue("Correo", obj.Correo);
                     cmd.Parameters.AddWithValue("Clave", obj.Clave);
@@ -84,7 +83,7 @@ namespace CapaDatos
 
                     cmd.ExecuteNonQuery();
 
-                    IdUsuarioGenerado = Convert.ToInt32( cmd.Parameters["IdUsuarioResultado"].Value);
+                    IdUsuarioGenerado = Convert.ToInt32(cmd.Parameters["IdUsuarioResultado"].Value);
                     Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
             }
@@ -115,7 +114,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Estado", obj.Estado);
 
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -147,9 +146,9 @@ namespace CapaDatos
                 {
                     SqlCommand cmd = new SqlCommand("SP_ELIMINARUSUARIO", oconexion);
                     cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
-                    
+
                     cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;
 

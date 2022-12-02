@@ -10,3 +10,4 @@ update PERMISO set NombreMenu = 'Clientes' where IdPermiso = 5;
 update PERMISO set NombreMenu = 'Proveedores' where IdPermiso = 6;
 update PERMISO set NombreMenu = 'Reportes' where IdPermiso = 7;
 update PERMISO set NombreMenu = 'Acerca De' where IdPermiso = 8;
+

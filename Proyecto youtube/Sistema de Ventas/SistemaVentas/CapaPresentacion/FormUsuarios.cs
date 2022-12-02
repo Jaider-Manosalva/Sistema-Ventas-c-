@@ -269,10 +269,5 @@ namespace CapaPresentacion
             txtClave.ReadOnly = false;
             txtConfimarclave.ReadOnly = false;
         }
-
-        private void comboBusqueda_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

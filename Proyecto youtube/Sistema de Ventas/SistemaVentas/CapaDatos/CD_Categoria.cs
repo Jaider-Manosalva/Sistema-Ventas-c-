@@ -59,6 +59,7 @@ namespace CapaDatos
                 {
                     SqlCommand cmd = new SqlCommand("SP_AGREGAR_CATEGORIA", oconexion);
                     cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
+                    cmd.Parameters.AddWithValue("estado",obj.Estado);
                    
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
@@ -69,8 +70,7 @@ namespace CapaDatos
 
                     cmd.ExecuteNonQuery();
                   
-
-                    IdCategoriaGenerado = Convert.ToInt32(cmd.Parameters["IdCategoriaResultado"].Value);
+                    IdCategoriaGenerado = Convert.ToInt32(cmd.Parameters["Resultado"].Value);
                     Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
 
                 }
@@ -94,8 +94,9 @@ namespace CapaDatos
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
                     SqlCommand cmd = new SqlCommand("SP_EDITAR_CATEGORIA", oconexion);
-                    cmd.Parameters.AddWithValue("IdUsuario", obj.IdCategoria);
-                    cmd.Parameters.AddWithValue("Descricpcion", obj.Descripcion);
+                    cmd.Parameters.AddWithValue("IdCategoria", obj.IdCategoria);
+                    cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
+                    cmd.Parameters.AddWithValue("estado",obj.Estado);
 
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
@@ -129,7 +130,7 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
                 {
-                    SqlCommand cmd = new SqlCommand("SP_ELIMINARUSUARIO", oconexion);
+                    SqlCommand cmd = new SqlCommand("SP_ELIMINAR_CATEGORIA", oconexion);
                     cmd.Parameters.AddWithValue("IdCategoria", obj.IdCategoria);
 
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
