@@ -218,7 +218,7 @@ update CATEGORIA set estado = 0 where Descripcion = 'prueba2'
 
 /*--PROCEDIMIENTO ALMACENADO PARA AGREGAR PRODUCTO --*/
 
-CREATE PROC SP_AGREGAR_PRODUCTO(
+alter procedure SP_AGREGAR_PRODUCTO(
 @Codigo varchar(50),
 @Nombre varchar(50),
 @Descripcion varchar(50),
@@ -232,11 +232,11 @@ BEGIN
    set @Resultado = 0
    if NOT EXISTS(select * from PRODUCTO where Codigo = @Codigo)
    begin
-      insert into PRODUCTO(Codigo,Nombre,Descripcion,IdCategoria) values (@Codigo,@Nombre,@Descripcion,@IdCategoria)
+      insert into PRODUCTO(Codigo,Nombre,Descripcion,IdCategoria,Estado) values (@Codigo,@Nombre,@Descripcion,@IdCategoria,@Estado)
 	  set @Resultado = SCOPE_IDENTITY()
    end
    else
-     set @Mensaje = '¡ Ya existe un producto con el mismo codigo !' 
+     set @Mensaje = 'Ya existe un producto con el mismo codigo' 
 END
 
 /*--PROCEDIMIENTO ALMACENADO PARA EDITAR PRODUCTO --*/
@@ -270,8 +270,9 @@ BEGIN
 END
 
 /*--PROCEDIMIENTO ALMACENADO PARA ELIMINAR PRODUCTO --*/
+drop procedure SP_ELIMINAR_PRODUCTO
 
-CREATE PROC SP_ELIMINAR_PRODUCTO(
+create proc SP_ELIMINAR_PRODUCTO(
 @IdProducto int,
 @Resultado int output,
 @Mensaje varchar(500) output
@@ -283,7 +284,7 @@ BEGIN
    set @Mensaje = ''
    declare @pasoreglas bit = 1
 
-   if NOT EXISTS(select * from DETALLE_COMPRA as dc 
+   if exists (select * from DETALLE_COMPRA as dc 
    inner join PRODUCTO as p on p.IdProducto = dc.IdProducto
    where p.IdProducto = @IdProducto)
    begin
@@ -292,9 +293,7 @@ BEGIN
 	  set @Mensaje = 'No se Puede Eliminar el producto por que se encuentra relacionado a una COMPRA\n'
    end
 
-   if NOT EXISTS(select * from DETALLE_VENTA as dv 
-   inner join PRODUCTO as p on p.IdProducto = dv.IdProducto
-   where p.IdProducto = @IdProducto)
+   if exists (select * from DETALLE_VENTA as dv inner join PRODUCTO as p on p.IdProducto = dv.IdProducto where p.IdProducto = @IdProducto)
    begin
       set @pasoreglas = 0
 	  set @Resultado = 0
@@ -306,5 +305,8 @@ BEGIN
       delete from PRODUCTO where IdProducto = @IdProducto
 	  set @Resultado = 1
    end
-
 END
+
+-- debo corregui los datos que hay 
+select * from PRODUCTO where Strock = 0
+update PRODUCTO set Estado = 1

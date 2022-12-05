@@ -47,3 +47,10 @@ C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormRegistrar.resources
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVerDetalle.resources
 C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.MenuDinamico.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ExcelNumberFormat.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.xml
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ExcelNumberFormat.xml

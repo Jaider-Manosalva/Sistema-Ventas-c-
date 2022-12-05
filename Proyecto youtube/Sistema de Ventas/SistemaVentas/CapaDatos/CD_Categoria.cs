@@ -47,7 +47,6 @@ namespace CapaDatos
             }
             return lista;
         }
-
         public int Registar(Categoria obj, out string Mensaje)
         {
             int IdCategoriaGenerado = 0;
@@ -83,7 +82,6 @@ namespace CapaDatos
 
             return IdCategoriaGenerado;
         }
-
         public bool Editar(Categoria obj, out string Mensaje)
         {
             bool Resultado = false;
@@ -120,7 +118,6 @@ namespace CapaDatos
 
             return Resultado;
         }
-
         public bool Eliminar(Categoria obj, out string Mensaje)
         {
             bool Resultado = false;
