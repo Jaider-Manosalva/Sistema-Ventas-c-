@@ -1,0 +1,98 @@
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaEntidad.dll
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\Capa_Negocio.dll
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaDatos.dll
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\Capa_Negocio.pdb
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaDatos.pdb
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.SuggestedBindingRedirects.cache
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Login.resources
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+D:\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\Capa_Negocio.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\Capa_Negocio.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Login.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormCategoria.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormClientes.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormCompras.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormProducto.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormProveedores.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormReportes.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormUsuarios.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormRegistrar.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVerDetalle.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.MenuDinamico.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ExcelNumberFormat.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.xml
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ExcelNumberFormat.xml
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto youtube\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormNegocio.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\Capa_Negocio.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ExcelNumberFormat.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\Capa_Negocio.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ClosedXML.xml
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\ExcelNumberFormat.xml
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormCategoria.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormClientes.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormCompras.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormNegocio.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormProducto.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormProveedores.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormRegistrar.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormReportes.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormUsuarios.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVerDetalle.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Login.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.MenuDinamico.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.ModalProveedores.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.ModalProductos.resources
+C:\Users\ASUS\Desktop\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.ModalClientes.resources

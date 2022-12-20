@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Proyecto",
+    "\\Proyecto\\Sistema de Ventas",
+    "\\Proyecto\\Sistema de Ventas\\SistemaVentas",
+    "\\Proyecto\\Sistema de Ventas\\SistemaVentas\\CapaPresentacion",
+    "\\Proyecto\\Sistema de Ventas\\SistemaVentas\\CapaPresentacion\\Modales",
+    "\\Proyecto\\Sistema de Ventas\\SistemaVentas\\Capa_Negocio"
   ],
-  "SelectedNode": "\\SistemaVentas.sln",
   "PreviewInSolutionExplorer": false
 }
