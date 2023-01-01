@@ -35,26 +35,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtIdProvee = new System.Windows.Forms.TextBox();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.txtIdClient = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDocumentoPro = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.simbolPor = new System.Windows.Forms.Label();
-            this.TxtPorcentaje = new System.Windows.Forms.NumericUpDown();
-            this.SiPorcentaje = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPrcioVenta = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPrcioCom = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.txtIdProduc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BuscarProducto = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCodigoProd = new System.Windows.Forms.TextBox();
             this.btnRegistar = new System.Windows.Forms.Button();
@@ -73,10 +68,11 @@
             this.txtPagaCon = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtCambio = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPrcioCom = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPorcentaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -147,8 +143,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.txtIdProvee);
-            this.groupBox2.Controls.Add(this.txtRazonSocial);
+            this.groupBox2.Controls.Add(this.txtIdClient);
+            this.groupBox2.Controls.Add(this.txtNombre);
             this.groupBox2.Controls.Add(this.btnBuscar);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
@@ -161,21 +157,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = " Informacion Clientes";
             // 
-            // txtIdProvee
+            // txtIdClient
             // 
-            this.txtIdProvee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdProvee.Location = new System.Drawing.Point(491, 21);
-            this.txtIdProvee.Name = "txtIdProvee";
-            this.txtIdProvee.Size = new System.Drawing.Size(36, 22);
-            this.txtIdProvee.TabIndex = 87;
+            this.txtIdClient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdClient.Location = new System.Drawing.Point(491, 21);
+            this.txtIdClient.Name = "txtIdClient";
+            this.txtIdClient.Size = new System.Drawing.Size(36, 22);
+            this.txtIdClient.TabIndex = 87;
             // 
-            // txtRazonSocial
+            // txtNombre
             // 
-            this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRazonSocial.Location = new System.Drawing.Point(308, 58);
-            this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(219, 22);
-            this.txtRazonSocial.TabIndex = 86;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Location = new System.Drawing.Point(308, 58);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(219, 22);
+            this.txtNombre.TabIndex = 86;
             // 
             // btnBuscar
             // 
@@ -221,9 +217,6 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.simbolPor);
-            this.groupBox3.Controls.Add(this.TxtPorcentaje);
-            this.groupBox3.Controls.Add(this.SiPorcentaje);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.txtCantidad);
             this.groupBox3.Controls.Add(this.label8);
@@ -233,7 +226,7 @@
             this.groupBox3.Controls.Add(this.txtProducto);
             this.groupBox3.Controls.Add(this.txtIdProduc);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.BuscarProducto);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.txtCodigoProd);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -244,54 +237,11 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = " Informacion de Producto ";
             // 
-            // simbolPor
-            // 
-            this.simbolPor.AutoSize = true;
-            this.simbolPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simbolPor.Location = new System.Drawing.Point(1003, 14);
-            this.simbolPor.Name = "simbolPor";
-            this.simbolPor.Size = new System.Drawing.Size(25, 20);
-            this.simbolPor.TabIndex = 98;
-            this.simbolPor.Text = "%";
-            this.simbolPor.Visible = false;
-            // 
-            // TxtPorcentaje
-            // 
-            this.TxtPorcentaje.Location = new System.Drawing.Point(939, 14);
-            this.TxtPorcentaje.Name = "TxtPorcentaje";
-            this.TxtPorcentaje.Size = new System.Drawing.Size(57, 22);
-            this.TxtPorcentaje.TabIndex = 97;
-            this.TxtPorcentaje.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TxtPorcentaje.Visible = false;
-            // 
-            // SiPorcentaje
-            // 
-            this.SiPorcentaje.AutoSize = true;
-            this.SiPorcentaje.Location = new System.Drawing.Point(839, 16);
-            this.SiPorcentaje.Name = "SiPorcentaje";
-            this.SiPorcentaje.Size = new System.Drawing.Size(94, 20);
-            this.SiPorcentaje.TabIndex = 96;
-            this.SiPorcentaje.Text = "Porcentaje";
-            this.SiPorcentaje.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(623, 53);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 16);
-            this.label9.TabIndex = 95;
-            this.label9.Text = "Precio de Compra :";
-            // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(974, 72);
+            this.txtCantidad.Location = new System.Drawing.Point(870, 72);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(120, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(61, 22);
             this.txtCantidad.TabIndex = 94;
             this.txtCantidad.Value = new decimal(new int[] {
             1,
@@ -302,16 +252,16 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(788, 53);
+            this.label8.Location = new System.Drawing.Point(662, 53);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 16);
+            this.label8.Size = new System.Drawing.Size(52, 16);
             this.label8.TabIndex = 93;
-            this.label8.Text = "Precio de Venta :";
+            this.label8.Text = "Precio :";
             // 
             // txtPrcioVenta
             // 
             this.txtPrcioVenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrcioVenta.Location = new System.Drawing.Point(791, 72);
+            this.txtPrcioVenta.Location = new System.Drawing.Point(665, 72);
             this.txtPrcioVenta.Name = "txtPrcioVenta";
             this.txtPrcioVenta.Size = new System.Drawing.Size(142, 22);
             this.txtPrcioVenta.TabIndex = 92;
@@ -319,19 +269,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(971, 53);
+            this.label7.Location = new System.Drawing.Point(867, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 16);
             this.label7.TabIndex = 91;
             this.label7.Text = "Cantidad :";
-            // 
-            // txtPrcioCom
-            // 
-            this.txtPrcioCom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrcioCom.Location = new System.Drawing.Point(626, 72);
-            this.txtPrcioCom.Name = "txtPrcioCom";
-            this.txtPrcioCom.Size = new System.Drawing.Size(142, 22);
-            this.txtPrcioCom.TabIndex = 90;
             // 
             // txtProducto
             // 
@@ -358,19 +300,20 @@
             this.label5.TabIndex = 88;
             this.label5.Text = "Producto :";
             // 
-            // button1
+            // BuscarProducto
             // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Image = global::CapaPresentacion.Properties.Resources.buscar;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(161, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 34);
-            this.button1.TabIndex = 88;
-            this.button1.UseVisualStyleBackColor = false;
+            this.BuscarProducto.BackColor = System.Drawing.Color.Silver;
+            this.BuscarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BuscarProducto.ForeColor = System.Drawing.Color.Silver;
+            this.BuscarProducto.Image = global::CapaPresentacion.Properties.Resources.buscar;
+            this.BuscarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarProducto.Location = new System.Drawing.Point(161, 65);
+            this.BuscarProducto.Name = "BuscarProducto";
+            this.BuscarProducto.Size = new System.Drawing.Size(39, 34);
+            this.BuscarProducto.TabIndex = 88;
+            this.BuscarProducto.UseVisualStyleBackColor = false;
+            this.BuscarProducto.Click += new System.EventHandler(this.BuscarProducto_Click);
             // 
             // label6
             // 
@@ -388,6 +331,7 @@
             this.txtCodigoProd.Name = "txtCodigoProd";
             this.txtCodigoProd.Size = new System.Drawing.Size(142, 22);
             this.txtCodigoProd.TabIndex = 0;
+            this.txtCodigoProd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigoProd_KeyDown);
             // 
             // btnRegistar
             // 
@@ -544,6 +488,23 @@
             this.txtCambio.TabIndex = 106;
             this.txtCambio.Text = "0";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(1001, 53);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 16);
+            this.label9.TabIndex = 95;
+            this.label9.Text = "Descuento :";
+            // 
+            // txtPrcioCom
+            // 
+            this.txtPrcioCom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrcioCom.Location = new System.Drawing.Point(1004, 72);
+            this.txtPrcioCom.Name = "txtPrcioCom";
+            this.txtPrcioCom.Size = new System.Drawing.Size(142, 22);
+            this.txtPrcioCom.TabIndex = 90;
+            // 
             // FormVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -565,13 +526,13 @@
             this.Name = "FormVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormVentas";
+            this.Load += new System.EventHandler(this.FormVentas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPorcentaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -588,26 +549,21 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtIdProvee;
-        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.TextBox txtIdClient;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDocumentoPro;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label simbolPor;
-        private System.Windows.Forms.NumericUpDown TxtPorcentaje;
-        private System.Windows.Forms.CheckBox SiPorcentaje;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPrcioVenta;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPrcioCom;
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.TextBox txtIdProduc;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BuscarProducto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCodigoProd;
         private System.Windows.Forms.Button btnRegistar;
@@ -626,5 +582,7 @@
         private System.Windows.Forms.TextBox txtPagaCon;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtCambio;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtPrcioCom;
     }
 }

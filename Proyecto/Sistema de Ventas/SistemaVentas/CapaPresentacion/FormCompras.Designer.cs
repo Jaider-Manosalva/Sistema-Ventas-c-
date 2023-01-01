@@ -58,6 +58,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtCodigoProd = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtTotalPagar = new System.Windows.Forms.TextBox();
+            this.btnRegistar = new System.Windows.Forms.Button();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,10 +69,6 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtTotalPagar = new System.Windows.Forms.TextBox();
-            this.btnRegistar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -416,6 +416,51 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.LightGreen;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(1281, 207);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(103, 115);
+            this.btnAgregar.TabIndex = 85;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(1278, 484);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 16);
+            this.label11.TabIndex = 97;
+            this.label11.Text = "Total A pagar:";
+            // 
+            // txtTotalPagar
+            // 
+            this.txtTotalPagar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotalPagar.Location = new System.Drawing.Point(1281, 503);
+            this.txtTotalPagar.Name = "txtTotalPagar";
+            this.txtTotalPagar.Size = new System.Drawing.Size(133, 22);
+            this.txtTotalPagar.TabIndex = 96;
+            this.txtTotalPagar.Text = "0";
+            // 
+            // btnRegistar
+            // 
+            this.btnRegistar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnRegistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistar.Location = new System.Drawing.Point(1281, 542);
+            this.btnRegistar.Name = "btnRegistar";
+            this.btnRegistar.Size = new System.Drawing.Size(133, 36);
+            this.btnRegistar.TabIndex = 98;
+            this.btnRegistar.Text = "Registrar";
+            this.btnRegistar.UseVisualStyleBackColor = false;
+            this.btnRegistar.Click += new System.EventHandler(this.btnRegistar_Click);
+            // 
             // IdProducto
             // 
             this.IdProducto.HeaderText = "IdProducto";
@@ -466,50 +511,6 @@
             this.btnEliminar.MinimumWidth = 6;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ReadOnly = true;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.LightGreen;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(1281, 207);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(103, 115);
-            this.btnAgregar.TabIndex = 85;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(1278, 484);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 16);
-            this.label11.TabIndex = 97;
-            this.label11.Text = "Total A pagar:";
-            // 
-            // txtTotalPagar
-            // 
-            this.txtTotalPagar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTotalPagar.Location = new System.Drawing.Point(1281, 503);
-            this.txtTotalPagar.Name = "txtTotalPagar";
-            this.txtTotalPagar.Size = new System.Drawing.Size(133, 22);
-            this.txtTotalPagar.TabIndex = 96;
-            this.txtTotalPagar.Text = "0";
-            // 
-            // btnRegistar
-            // 
-            this.btnRegistar.BackColor = System.Drawing.Color.IndianRed;
-            this.btnRegistar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistar.Location = new System.Drawing.Point(1281, 542);
-            this.btnRegistar.Name = "btnRegistar";
-            this.btnRegistar.Size = new System.Drawing.Size(133, 36);
-            this.btnRegistar.TabIndex = 98;
-            this.btnRegistar.Text = "Registrar";
-            this.btnRegistar.UseVisualStyleBackColor = false;
             // 
             // FormCompras
             // 
@@ -575,6 +576,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTotalPagar;
         private System.Windows.Forms.Button btnRegistar;
+        private System.Windows.Forms.CheckBox SiPorcentaje;
+        private System.Windows.Forms.NumericUpDown TxtPorcentaje;
+        private System.Windows.Forms.Label simbolPor;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
@@ -582,8 +586,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
-        private System.Windows.Forms.CheckBox SiPorcentaje;
-        private System.Windows.Forms.NumericUpDown TxtPorcentaje;
-        private System.Windows.Forms.Label simbolPor;
     }
 }

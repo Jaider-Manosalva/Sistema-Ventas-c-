@@ -1,5 +1,4 @@
-﻿using CapaEntidad;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +27,7 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        //EVENTO AL INICIAR FORMULARIO
         private void FormCompras_Load(object sender, EventArgs e)
         {
             //LLENAR EL COMBOBOX DE TIPO DOCUMENTO CON SUS ITEMS CORRESPONDIENTES
@@ -98,6 +98,7 @@ namespace CapaPresentacion
                 }
             }
         }
+        //AGREGA UN PRODUCTO AL DATAGRIW
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             decimal precioCompra = 0;
@@ -114,7 +115,7 @@ namespace CapaPresentacion
                 MessageBox.Show("Precio Compra - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            else if (!decimal.TryParse(txtPrcioVenta.Text, out precioCompra))
+            else if (!decimal.TryParse(txtPrcioVenta.Text, out precioVenta))
             {
                 MessageBox.Show("Precio Venta - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -149,11 +150,19 @@ namespace CapaPresentacion
         {
             txtIdProduc.Text = "0";
             txtCodigoProd.Text = "";
+            txtProducto.Text = "";
             txtCodigoProd.BackColor = Color.White;
             txtIdProduc.Text = "";
             txtPrcioCom.Text = "";
             txtPrcioVenta.Text = "";
             txtCantidad.Value = 1;
+        }
+        //FUNCION PARA LIMPIAR CAMPOS
+        private void limpiarProveedor()
+        {
+            txtIdProvee.Text = "0";
+            txtDocumentoPro.Text = "";
+            txtRazonSocial.Text = "";
         }
         //FUNCION PARA CALCULAR EL TOTAL EN LA TABLA
         private void CalcularTotal()
@@ -232,7 +241,7 @@ namespace CapaPresentacion
                 }
             }
         }
-
+        //COMPORTAMIENTO DEL CHECK DE PORCENTAJE
         private void SiPorcentaje_Click(object sender, EventArgs e)
         {
             if (SiPorcentaje.Checked)
@@ -250,7 +259,7 @@ namespace CapaPresentacion
                 txtPrcioVenta.ReadOnly = false;
             }
         }
-
+        //REALIZA LA OPERACION ENTRE EL PORCENTAJE Y EL PRECIO DE COMPRA
         private void TxtPorcentaje_ValueChanged(object sender, EventArgs e)
         {
             if (TxtPorcentaje.Value < 0)
@@ -260,6 +269,76 @@ namespace CapaPresentacion
                 double calculo = (Convert.ToDouble(txtPrcioCom.Text) * Convert.ToInt32(TxtPorcentaje.Value) / 100) + Convert.ToDouble(txtPrcioCom.Text);
                 txtPrcioVenta.Text = calculo.ToString();
             }
+        }
+        //REGISTRA UN PRODUCTO
+        private void btnRegistar_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtIdProvee.Text) == 0)
+            {
+                MessageBox.Show("Debe seleccionar un proveedor","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (dataGridView1.Rows.Count < 1)
+            {
+                MessageBox.Show("Debe seleccionar productos en la compra", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            DataTable detalle_compra = new DataTable();
+
+            detalle_compra.Columns.Add("IdProducto", typeof(int));
+            detalle_compra.Columns.Add("PrecioCompra", typeof(decimal));
+            detalle_compra.Columns.Add("PrecioVenta", typeof(decimal));
+            detalle_compra.Columns.Add("Cantidad", typeof(int));
+            detalle_compra.Columns.Add("MontoTotal", typeof(decimal));
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                detalle_compra.Rows.Add(
+                new object[]
+                {
+                    Convert.ToUInt32(
+                    row.Cells["IdProducto"].Value.ToString()),
+                    row.Cells["PrecioCompra"].Value.ToString(),
+                    row.Cells["PrecioVenta"].Value.ToString(),
+                    row.Cells["Cantidad"].Value.ToString(),
+                    row.Cells["SubTotal"].Value.ToString()
+                }); 
+            }
+
+            int Correlativo = new CN_Compra().Correlativo();
+            string numeroDocumento = string.Format("{0:00000}",Correlativo);
+
+            Compra oCompra = new Compra()
+            {
+                ObjUsuario = new Usuario() { IdUsuario = _Usuario.IdUsuario },
+                ObjProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdProvee.Text) },
+                TipoDocumento = ((OpcionCombo)ComboTipoDocumento.SelectedItem).Texto,
+                NumeroDocuemnto = numeroDocumento,
+                MontoTotal = Convert.ToDecimal(txtTotalPagar.Text)
+            };
+
+            string mensaje = string.Empty;
+
+            bool respuesta = new CN_Compra().Registar(oCompra, detalle_compra, out mensaje);
+
+            if (respuesta)
+            {
+                var resul = MessageBox.Show("Numero de compra generada:" + numeroDocumento + "¿ Desea Copiar al portapapeles?","Mensaje",MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (resul == DialogResult.Yes)
+                    Clipboard.SetText(numeroDocumento);
+                
+                limpiarProveedor();
+                dataGridView1.Rows.Clear();
+                CalcularTotal();
+            }
+            else
+            {
+                MessageBox.Show(mensaje,"Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+
+
         }
     }
 }

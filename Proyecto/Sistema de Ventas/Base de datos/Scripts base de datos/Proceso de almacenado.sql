@@ -1,10 +1,11 @@
 use DB_SISTEMA_VENTAS
 
-select * from USUARIO
-use DB_SISTEMA_VENTAS
+select count(*) + 1 from COMPRA
+select * from DETALLE_COMPRA
+
 /*--- PROCEDIMIENTO PARA AGREGAR USUARIO ---*/
 
-CREATE PROC SP_REGISTRARUSUARIO(
+CREATE PROCEDURE SP_REGISTRARUSUARIO(
 @Documento varchar(50),
 @NombreCompleto varchar(100),
 @Correo varchar(50),
@@ -40,11 +41,11 @@ select @idusuariogenerado
 
 select @Mensaje
 
-go
+GO
 
 /*----- PROCEDIMIENTO PARA ACTUALIZAR USUARIO -----*/
 
-CREATE PROC SP_EDITARUSUARIO(
+CREATE PROCEDURE SP_EDITARUSUARIO(
 @IdUsuario int,
 @Documento varchar(50),
 @NombreCompleto varchar(100),
@@ -77,6 +78,8 @@ begin
       set @Mensaje = 'El documento ya se encuentra registrado en la base de datos'
 end
 
+GO
+
 declare @respuesta bit
 declare @mensaje varchar(500)
 
@@ -90,7 +93,7 @@ select * from USUARIO
 
 /*----- PROCEDIMIENTO PARA ELIMINAR USUARIO -----*/
 
-CREATE PROC SP_ELIMINARUSUARIO(
+CREATE PROCEDURE SP_ELIMINARUSUARIO(
 @IdUsuario int,
 @Respuesta bit output,
 @Mensaje varchar(500) output
@@ -126,6 +129,8 @@ begin
   end
 end
 
+GO
+
 declare @respuesta bit
 declare @mensaje varchar(500)
 
@@ -138,7 +143,7 @@ select @Mensaje
 
 /*----- PROCEDIMIENTO PARA AGREGAR CATEGORIA // modificado por falta de parametro------*/ 
 
-Alter Procedure SP_AGREGAR_CATEGORIA(
+CREATE PROCEDURE SP_AGREGAR_CATEGORIA(
 @Descripcion varchar(100),
 @Estado bit,
 @Resultado int output,
@@ -155,7 +160,9 @@ begin
 	else
 	     set @Mensaje = 'No se puede repetir la descripcion de una categoria'
 end
-go
+
+GO
+
 /*----- PROCEDIMIENTO PARA ACTUALIZAR CATEGORIA ------*/
 
 Alter Procedure SP_EDITAR_CATEGORIA(
@@ -182,11 +189,11 @@ begin
 	end
 end
 
-go
+GO
 
 /*----- PROCEDIMIENTO PARA ELIMINAR CATEGORIA ------*/
 
-CREATE PROC SP_ELIMINAR_CATEGORIA(
+CREATE PROCEDUREC SP_ELIMINAR_CATEGORIA(
 @IdCategoria int,
 @Resultado bit output,
 @Mensaje varchar(500) output
@@ -208,6 +215,8 @@ begin
 	end
 end
 
+GO
+
 insert into CATEGORIA(Descripcion,estado) values ('Lacteos',1)
 insert into CATEGORIA(Descripcion,estado) values ('Embutidos',1)
 insert into CATEGORIA(Descripcion,estado) values ('Enlatados',1)
@@ -218,7 +227,7 @@ update CATEGORIA set estado = 0 where Descripcion = 'prueba2'
 
 /*--PROCEDIMIENTO ALMACENADO PARA AGREGAR PRODUCTO --*/
 
-alter procedure SP_AGREGAR_PRODUCTO(
+CREATE PROCEDURE SP_AGREGAR_PRODUCTO(
 @Codigo varchar(50),
 @Nombre varchar(50),
 @Descripcion varchar(50),
@@ -239,9 +248,10 @@ BEGIN
      set @Mensaje = 'Ya existe un producto con el mismo codigo' 
 END
 
+GO
 /*--PROCEDIMIENTO ALMACENADO PARA EDITAR PRODUCTO --*/
 
-CREATE PROC SP_EDITAR_PRODUCTO(
+CREATE PROCEDURE SP_EDITAR_PRODUCTO(
 @IdProducto int,
 @Codigo varchar(50),
 @Nombre varchar(50),
@@ -269,10 +279,10 @@ BEGIN
      set @Mensaje = '¡ Ya existe un producto con el mismo codigo !' 
 END
 
+GO
 /*--PROCEDIMIENTO ALMACENADO PARA ELIMINAR PRODUCTO --*/
-drop procedure SP_ELIMINAR_PRODUCTO
 
-create proc SP_ELIMINAR_PRODUCTO(
+CREATE PROCEDURE SP_ELIMINAR_PRODUCTO(
 @IdProducto int,
 @Resultado int output,
 @Mensaje varchar(500) output
@@ -307,6 +317,7 @@ BEGIN
    end
 END
 
+GO
 
 /*--- PROCEDIMIENTO PARA AGREGAR CLIENTE ---*/
 
@@ -333,7 +344,8 @@ begin
   else
       set @Mensaje = 'El documento ya se encuentra registrado en la base de datos'
 end
-go
+
+GO
 
 /*----- PROCEDIMIENTO PARA ACTUALIZAR USUARIO -----*/
 
@@ -366,6 +378,7 @@ begin
       set @Respuesta = 0
       set @Mensaje = 'El documento ya se encuentra registrado en la base de datos'
 end
+
 GO
 
 /*--- PROCEDIMIENTO PARA AGREGAR PROVEEDOR ---*/
@@ -393,7 +406,8 @@ begin
   else
       set @Mensaje = 'El documento ya se encuentra registrado en la base de datos'
 end
-go
+
+GO
 
 /*----- PROCEDIMIENTO PARA ACTUALIZAR PROVEEDOR -----*/
 
@@ -427,7 +441,7 @@ begin
       set @Mensaje = 'El documento ya se encuentra registrado en la base de datos'
 end
 
-go
+GO
 
 /*----- PROCEDIMIENTO PARA ELIMINAR PROVEEDOR -----*/
 
@@ -459,12 +473,60 @@ select * from PROVEEDOR
 
 /*----- PROCEDIMIENTO PARA REGISTRAR COMPRA -----*/
 
-CREATE TYPE[dbo].[EDetalle_compra] as table(
+CREATE TYPE[dbo].[EDetalle_compra] AS TABLE(
   [IdProducto] int null,
-  [PrecioCompra] Decimal(18,2) null,
-  [PrecioVenta] C,
+  [PrecioCompra] Decimal(10,2) null,
+  [PrecioVenta] Decimal(10,2) null,
   [Cantidad] int null,
-  [IdProducto] int null,
-  [MontoTotal] Decimal(18,2) null,,
-
+  [MontoTotal] Decimal(10,2) null
 )
+
+GO
+
+ALTER PROCEDURE SP_REGISTRARCOMPRA(
+@IdUsuario int,
+@IdProveedor int,
+@TipoDocumento varchar(500),
+@NumeroDocumento varchar(500),
+@MontoTotal decimal(10,2),
+@DetalleCompra [EDetalle_compra] readonly,
+@resultado bit output,
+@Mensaje varchar(500) output
+
+)as
+begin
+    begin try
+
+	declare @idcompra int = 0
+	set @resultado = 1
+	set @Mensaje = ''
+
+	begin transaction registro
+
+	insert into COMPRA(IdUsuario,IdProveedor,TipoDocumento,NumeroDocumento,MontoTotal)
+	       values(@IdUsuario,@IdProveedor,@TipoDocumento,@NumeroDocumento,@MontoTotal)
+
+    set @idcompra = SCOPE_IDENTITY()
+
+	insert into DETALLE_COMPRA(IdCompra,IdProducto,PrecioCompra,Precioventa,Cantidad,MontoTotal)
+	select @idcompra,IdProducto,PrecioCompra,PrecioVenta,Cantidad,MontoTotal from @DetalleCompra
+
+	update p set p.Strock  = p.Strock + dc.Cantidad,
+	             p.PrecioCompra = dc.PrecioCompra, 
+				 p.Precioventa = dc.PrecioVenta 
+	from PRODUCTO P 
+	inner join @DetalleCompra as dc on dc.IdProducto = p.IdProducto
+	commit transaction registro
+
+	end try
+	begin catch
+
+	set @resultado = 0
+	set @Mensaje = ERROR_MESSAGE()
+	rollback transaction registro
+
+	end catch
+
+end
+
+GO

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.comboBusqueda = new System.Windows.Forms.ComboBox();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -37,8 +40,11 @@
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGriwProveedor = new System.Windows.Forms.DataGridView();
+            this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Document = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGriwProveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBusqueda
@@ -119,6 +125,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(39, 34);
             this.btnBuscar.TabIndex = 106;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnLimpiar
             // 
@@ -133,24 +140,72 @@
             this.btnLimpiar.Size = new System.Drawing.Size(39, 34);
             this.btnLimpiar.TabIndex = 105;
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // dataGridView1
+            // dataGriwProveedor
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(188, 193);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 107;
+            this.dataGriwProveedor.AllowUserToAddRows = false;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGriwProveedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGriwProveedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGriwProveedor.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGriwProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGriwProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGriwProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdCliente,
+            this.Document,
+            this.Nombre});
+            this.dataGriwProveedor.Location = new System.Drawing.Point(13, 119);
+            this.dataGriwProveedor.MultiSelect = false;
+            this.dataGriwProveedor.Name = "dataGriwProveedor";
+            this.dataGriwProveedor.ReadOnly = true;
+            this.dataGriwProveedor.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(78)))), ((int)(((byte)(152)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGriwProveedor.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGriwProveedor.RowTemplate.Height = 28;
+            this.dataGriwProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGriwProveedor.Size = new System.Drawing.Size(966, 507);
+            this.dataGriwProveedor.TabIndex = 107;
+            this.dataGriwProveedor.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGriwProveedor_CellContentDoubleClick);
+            // 
+            // IdCliente
+            // 
+            this.IdCliente.HeaderText = "IdClientes";
+            this.IdCliente.MinimumWidth = 6;
+            this.IdCliente.Name = "IdCliente";
+            this.IdCliente.ReadOnly = true;
+            this.IdCliente.Visible = false;
+            // 
+            // Document
+            // 
+            this.Document.HeaderText = "Documento";
+            this.Document.MinimumWidth = 6;
+            this.Document.Name = "Document";
+            this.Document.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // ModalClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 658);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGriwProveedor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.comboBusqueda);
@@ -158,8 +213,10 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Name = "ModalClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModalClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ModalClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGriwProveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +233,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGriwProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Document;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

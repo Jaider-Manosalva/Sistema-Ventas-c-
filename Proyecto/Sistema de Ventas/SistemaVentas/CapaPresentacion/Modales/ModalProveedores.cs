@@ -22,8 +22,6 @@ namespace CapaPresentacion.Modales
         {
             InitializeComponent();
         }
-
-
         private void ModalProveedores_Load(object sender, EventArgs e)
         {
             //LLENAR EL COMBOBOX DE BUSQUEDA CON EL NOMBRE DE LAS FILAS VISIBLES
