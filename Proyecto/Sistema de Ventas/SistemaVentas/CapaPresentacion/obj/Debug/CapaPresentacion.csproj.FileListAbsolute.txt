@@ -124,7 +124,6 @@ C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormReportes.resources
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormUsuarios.resources
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVentas.resources
-C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormVerDetalle.resources
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.Login.resources
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.MenuDinamico.resources
@@ -137,3 +136,5 @@ C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormDetalleCompras.resources
+C:\Users\ASUS\Documents\proyectos de escritorio\Jala University\Sistema-Ventas-c-\Proyecto\Sistema de Ventas\SistemaVentas\CapaPresentacion\obj\Debug\CapaPresentacion.FormDetalleVentas.resources

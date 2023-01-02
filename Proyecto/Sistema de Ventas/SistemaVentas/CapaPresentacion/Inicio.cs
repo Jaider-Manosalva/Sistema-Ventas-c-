@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 using CapaEntidad;
 using Capa_Negocio;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion
 {
@@ -49,7 +48,7 @@ namespace CapaPresentacion
             txtUsuario.Text = UsuarioActual.NombreCompleto;
         }
 
-        //METODO PARA LA ITERACCION DEL MENU CUANDO ES ToolStripButton
+        //METODO PARA LA ITERACCION DEL MENU CUANDO ES TOOLSTRIPBUTTON 
         private void OpenForm(ToolStripButton menu , Form Formulario )
         {
             if (MenuActivo != null)
@@ -69,9 +68,7 @@ namespace CapaPresentacion
             MenuActivo = menu;
 
             if (FormularioActivo != null)
-            {
                 FormularioActivo.Close();
-            }
 
             FormularioActivo = Formulario;
 
@@ -82,10 +79,9 @@ namespace CapaPresentacion
 
             Contenedor.Controls.Add(FormularioActivo);
             Formulario.Show();
-
         }
 
-        //METODO PARA LA ITERACCION DEL MENU ToolStripDropDownButton
+        //METODO PARA LA ITERACCION DEL MENU TOOLSTRIPDROPDOWBUTTON
         private void OpenForm(ToolStripDropDownButton menu, Form Formulario)
         {
             if (MenuAction != null)
@@ -121,50 +117,44 @@ namespace CapaPresentacion
         }
 
         //EVENTOS BOTONES MENU
-
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             OpenForm((ToolStripButton)sender,new FormUsuarios());
         }
-
-        private void btnCompras_Click(object sender, EventArgs e)
-        {
-            OpenForm((ToolStripButton)sender, new FormCompras(UsuarioActual));
-        }
-
         private void btnClientes_Click(object sender, EventArgs e)
         {
             OpenForm((ToolStripButton)sender, new FormClientes());
         }
-
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             OpenForm((ToolStripButton)sender, new FormProveedores());
         }
 
         //EVENTOS BOTONES SUBMENUS
-
         private void btnCategoria_Click(object sender, EventArgs e)
         {
-            //toolStripDropDownButton
             OpenForm(btnMantenedor, new FormCategoria());
         }
-
         private void btnProducto_Click(object sender, EventArgs e)
         {
             OpenForm(btnMantenedor, new FormProducto());
         }
-
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             OpenForm(btnVentas, new FormVentas());
         }
-
         private void btnverDetalle_Click(object sender, EventArgs e)
         {
-            OpenForm(btnVentas, new FormVerDetalle());
+            OpenForm(btnVentas, new FormDetalleVentas());
         }
-
+        private void btnRegistrarCompra_Click(object sender, EventArgs e)
+        {
+            OpenForm(btnCompras, new FormCompras(UsuarioActual));
+        }
+        private void btnverDetalleCompras_Click(object sender, EventArgs e)
+        {
+            OpenForm(btnCompras, new FormDetalleCompras());
+        }
         private void btnNegocio_Click(object sender, EventArgs e)
         {
             OpenForm(btnMantenedor, new FormNegocio());

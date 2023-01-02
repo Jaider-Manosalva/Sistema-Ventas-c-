@@ -6,11 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaEntidad;
+using System.Collections;
+using System.ComponentModel;
 
 namespace CapaDatos
 {
     public class CD_Compra
     {
+        //FUNCION PARA OBTENER EL CORRELATIVO DE LA ULTIMA COMPRA
         public int ObtenerCorrelativo()
         {
             int correlativo = 0;
@@ -34,7 +37,7 @@ namespace CapaDatos
             }
             return correlativo;
         }
-
+        //FUNCION PARA REGISTRAR UNA COMPRA
         public bool Registrar(Compra obj, DataTable DetalleCompra, out string Mensaje)
         {
             bool Respuesta = false; 
@@ -71,6 +74,93 @@ namespace CapaDatos
                 }
             }
             return Respuesta;
+        }
+        //FUNCION PARA OBTENER DATOS DE LA COMPRA
+        public Compra ObtenerCompra(string correlativo)
+        {
+            Compra obj = new Compra();
+
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("select c.IdCompra,u.NombreCompleto,p.Documento,p.RazonSocial,c.TipoDocumento,c.NumeroDocumento,c.MontoTotal,CONVERT(char(10),c.FechaRegistro,103)[fechaRegistro]");
+                    query.AppendLine("from COMPRA as c inner join USUARIO as u on u.IdUsuario = c.IdUsuario inner join PROVEEDOR as p on p.IdProveedor = c.IdProveedor");
+                    query.AppendLine("where c.NumeroDocumento = @numero");
+
+                    SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
+                    cmd.Parameters.AddWithValue("@numero",correlativo);
+                    cmd.CommandType = CommandType.Text;
+
+                    oconexion.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            obj = new Compra()
+                            {
+                                IdCompra = Convert.ToInt32(dr["IdCompra"]),
+                                ObjUsuario = new Usuario() { NombreCompleto = dr["NombreCompleto"].ToString() },
+                                ObjProveedor = new Proveedor() { Documento = dr["Documento"].ToString(), RazonSocial = dr["RazonSocial"].ToString() },
+                                TipoDocumento = dr["TipoDocumento"].ToString(),
+                                NumeroDocuemnto = dr["NumeroDocumento"].ToString(),
+                                MontoTotal = Convert.ToDecimal(dr["MontoTotal"]),
+                                FechaRegistro = dr["FechaRegistro"].ToString()
+                            };
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                   obj = new Compra();
+                }
+            }
+             return obj;
+        }
+        //FUNCION PARA OBTENER EL DETALLE DE COMPRA
+        public List<Detalle_Compra> ObtenerDetalle(string correlativo)
+        {
+            List<Detalle_Compra> lista = new List<Detalle_Compra>();
+
+            using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("select  p.Nombre,dc.PrecioCompra,dc.Cantidad,dc.MontoTotal");
+                    query.AppendLine("from DETALLE_COMPRA dc inner join PRODUCTO p on p.IdProducto = dc.IdProducto");
+                    query.AppendLine("where dc.IdCompra = @numero");
+
+                    SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
+                    cmd.Parameters.AddWithValue("@numero", correlativo);
+                    cmd.CommandType = CommandType.Text;
+
+                    oconexion.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Detalle_Compra()
+                            {
+                                ObjProducto = new Producto() { Nombre = dr["Nombre"].ToString()},
+                                PrecioCompra = Convert.ToDecimal(dr["PrecioCompra"]),
+                                Cantidad = Convert.ToInt32(dr["Cantidad"]),
+                                MontoTotal = Convert.ToDecimal(dr["MotoTotal"])
+                                
+                            });
+                            
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lista = new List<Detalle_Compra>();
+                }
+            }
+            return lista;
         }
     }
 }

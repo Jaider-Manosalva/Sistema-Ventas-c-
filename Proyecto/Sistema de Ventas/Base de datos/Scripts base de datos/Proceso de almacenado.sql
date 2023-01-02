@@ -1,8 +1,5 @@
 use DB_SISTEMA_VENTAS
 
-select count(*) + 1 from COMPRA
-select * from DETALLE_COMPRA
-
 /*--- PROCEDIMIENTO PARA AGREGAR USUARIO ---*/
 
 CREATE PROCEDURE SP_REGISTRARUSUARIO(
@@ -30,16 +27,6 @@ begin
   else
       set @Mensaje = 'El documento ya se encuentra registrado en la base de datos'
 end
-
-
-declare @idusuariogenerado int
-declare @mensaje varchar(500)
-
-exec SP_REGISTRARUSUARIO '505050','carlos andres','carlos@gmail','123',1,0,@idusuariogenerado output,@Mensaje output
-
-select @idusuariogenerado
-
-select @Mensaje
 
 GO
 
@@ -79,18 +66,6 @@ begin
 end
 
 GO
-
-declare @respuesta bit
-declare @mensaje varchar(500)
-
-exec SP_EDITARUSUARIO 3,'404040','jhon jaider','Jhon@gmail','123',1,1,@Respuesta output,@Mensaje output
-
-select @Respuesta
-
-select @Mensaje
-
-select * from USUARIO
-
 /*----- PROCEDIMIENTO PARA ELIMINAR USUARIO -----*/
 
 CREATE PROCEDURE SP_ELIMINARUSUARIO(
@@ -130,16 +105,6 @@ begin
 end
 
 GO
-
-declare @respuesta bit
-declare @mensaje varchar(500)
-
-exec SP_ELIMINARUSUARIO 5,@Respuesta output,@Mensaje output
-
-select @Respuesta
-
-select @Mensaje
-
 
 /*----- PROCEDIMIENTO PARA AGREGAR CATEGORIA // modificado por falta de parametro------*/ 
 
@@ -193,7 +158,7 @@ GO
 
 /*----- PROCEDIMIENTO PARA ELIMINAR CATEGORIA ------*/
 
-CREATE PROCEDUREC SP_ELIMINAR_CATEGORIA(
+CREATE PROCEDURE SP_ELIMINAR_CATEGORIA(
 @IdCategoria int,
 @Resultado bit output,
 @Mensaje varchar(500) output
@@ -216,14 +181,6 @@ begin
 end
 
 GO
-
-insert into CATEGORIA(Descripcion,estado) values ('Lacteos',1)
-insert into CATEGORIA(Descripcion,estado) values ('Embutidos',1)
-insert into CATEGORIA(Descripcion,estado) values ('Enlatados',1)
-
-select * from CATEGORIA
-
-update CATEGORIA set estado = 0 where Descripcion = 'prueba2'
 
 /*--PROCEDIMIENTO ALMACENADO PARA AGREGAR PRODUCTO --*/
 
@@ -530,3 +487,13 @@ begin
 end
 
 GO
+
+/*----- PROCEDIMIENTO PARA BUSCAR COMPRA -----*/
+
+select c.IdCompra,u.NombreCompleto,p.Documento,p.RazonSocial,c.TipoDocumento,c.NumeroDocumento,c.MontoTotal,CONVERT(char(10),c.FechaRegistro,103)[fechaRegistro] 
+from COMPRA as c inner join USUARIO as u on u.IdUsuario = c.IdUsuario inner join PROVEEDOR as p on p.IdProveedor = c.IdProveedor
+where c.NumeroDocumento = '00003'
+
+select  p.Nombre,dc.PrecioCompra,dc.Cantidad,dc.MontoTotal
+from DETALLE_COMPRA dc inner join PRODUCTO p on p.IdProducto = dc.IdProducto
+where dc.IdCompra = 1

@@ -74,6 +74,12 @@
     <Compile Include="FormCompras.Designer.cs">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDetalleCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetalleCompras.Designer.cs">
+      <DependentUpon>FormDetalleCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNegocio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,11 +122,11 @@
     <Compile Include="FormVentas.Designer.cs">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVerDetalle.cs">
+    <Compile Include="FormDetalleVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVerDetalle.Designer.cs">
-      <DependentUpon>FormVerDetalle.cs</DependentUpon>
+    <Compile Include="FormDetalleVentas.Designer.cs">
+      <DependentUpon>FormDetalleVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="FormCompras.resx">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDetalleCompras.resx">
+      <DependentUpon>FormDetalleCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNegocio.resx">
       <DependentUpon>FormNegocio.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,8 +200,8 @@
     <EmbeddedResource Include="FormVentas.resx">
       <DependentUpon>FormVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVerDetalle.resx">
-      <DependentUpon>FormVerDetalle.cs</DependentUpon>
+    <EmbeddedResource Include="FormDetalleVentas.resx">
+      <DependentUpon>FormDetalleVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -323,6 +332,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\subir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cajero-automatico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detalle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
